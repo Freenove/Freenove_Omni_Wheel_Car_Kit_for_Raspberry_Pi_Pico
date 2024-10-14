@@ -1,6 +1,6 @@
 ## Freenove_Omni_Wheel_Car_Kit_for_Raspberry_Pi_Pico
 
-> A Omni-Wheel-Car-Kit-for-Raspberry-Pi-Pico
+> A Omni_Wheel_Car_Kit_for_Raspberry_Pi_Pico
 
 <img src='Picture/omni_wheel_car.BMP' width='70%' align = left/>
 
