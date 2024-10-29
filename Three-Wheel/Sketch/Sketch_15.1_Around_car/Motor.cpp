@@ -4,8 +4,8 @@
 #include "PID.h"
 #include "Encoder.h"
 
-extern const int wheel1_A_pin = 9; // Define motor1 drive pins
-extern const int wheel1_B_pin = 8; // Define motor1 drive pins
+extern const int wheel1_A_pin = 8; // Define motor1 drive pins
+extern const int wheel1_B_pin = 9; // Define motor1 drive pins
 
 extern const int wheel2_A_pin = 12;// Define motor2 drive pins
 extern const int wheel2_B_pin = 13;// Define motor2 drive pins
@@ -15,8 +15,8 @@ extern const int wheel3_B_pin = 14;// Define motor3 drive pins
 
 extern int angle,turn_output,angle_flag,angle_state,angle_temp,state,angle_a_out;
 
-int v1,v2,v3,v4,vx,vy,pid_v1,pid_v2,pid_v3,angle_v,angle_circle;
-int pid1,pid2,pid3,pid4;
+int v1,v2,v3,vx,vy,pid_v1,pid_v2,pid_v3,angle_v,angle_circle;
+int pid1,pid2,pid3;
 int a1,b1,a2,b2,a3,b3;
 int angle_hand,angle_counter,location_state;
 

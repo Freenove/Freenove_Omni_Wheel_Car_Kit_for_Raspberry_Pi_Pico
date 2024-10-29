@@ -1,13 +1,8 @@
 #include "Pid.h"
 #include "Arduino.h"
 
-#ifndef Car_4_wheel
-  float speed_p = 2.0,speed_i = 0,speed_d = 3.4;
-  float angle_p = 0.95,angle_i = 0 ,angle_d = 3.1;
-#else
-  float speed_p = 2.0,speed_i = 0,speed_d = 3.4;
-  float angle_p = 0.9,angle_i = 0 ,angle_d = 1.4;
-#endif
+float speed_p = 2.0,speed_i = 0,speed_d = 3.4;
+float angle_p = 0.9,angle_i = 0 ,angle_d = 1.4;
 
 int speed1_error,speed1_lasterror,speed1_integral,speed1_Maxintegral,speed1_output,speed1_Maxoutput;
 
@@ -15,7 +10,6 @@ int speed2_error,speed2_lasterror,speed2_integral,speed2_Maxintegral,speed2_outp
 
 int speed3_error,speed3_lasterror,speed3_integral,speed3_Maxintegral,speed3_output,speed3_Maxoutput;
 
-int speed4_error,speed4_lasterror,speed4_integral,speed4_Maxintegral,speed4_output,speed4_Maxoutput;
 
 int Angle_error,Angle_lasterror,Angle_integral,Angle_output;
 
@@ -100,31 +94,6 @@ float Speed3_PID(float target,float feedback)
       speed3_output = 0; 
     
     return speed3_output;
-}
-
-float Speed4_PID(float target,float feedback)
-{
-    speed4_error = target - feedback;
-    if(speed4_error < 1 && speed4_error > -1) speed4_error = 0;// PID with dead zone
-    speed4_integral += speed4_error;
-
-    if(speed_i * speed4_integral < -speed4_Maxintegral) 
-      speed4_integral = -speed4_Maxintegral / speed_i;
-    else if(speed_i * speed4_integral > speed4_Maxintegral) 
-      speed4_integral = speed4_Maxintegral / speed_i;
-
-    if(target == 0) 
-      speed4_integral = 0;
-
-    speed4_output += (speed_p * speed4_error) + (speed_i * speed4_integral)
-                   + (speed_d * (speed4_error - speed4_lasterror));
-
-    speed4_lasterror = speed4_error;
-
-    if(target == 0) 
-      speed4_output = 0; 
-    
-    return speed4_output;
 }
 
 float Angle_PID_Realize(float target, float feedback)

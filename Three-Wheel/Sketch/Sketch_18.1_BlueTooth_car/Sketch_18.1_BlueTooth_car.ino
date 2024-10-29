@@ -266,7 +266,7 @@ void setup() {
     angle_head = angle;
   }
 
-  tone(PIN_BUZZER, 2000, 200);
+  // tone(PIN_BUZZER, 2000, 200);
 
   // Timer interrupt Settings
   ITimer0.attachInterruptInterval(TIMER0_INTERVAL_MS, timer_1ms_control);
@@ -376,17 +376,14 @@ void speed_add() {
   speed1val += speed1;
   speed2val += speed2;
   speed3val += speed3;
-  speed4val += speed4;
 }
 
 void speed_calculate() {
   speed1 = map(speed1val / 3,0,48,0,100);
   speed2 = map(speed2val / 3,0,48,0,100);
   speed3 = map(speed3val / 3,0,48,0,100);
-  speed4 = map(speed4val / 3,0,48,0,100);
 
   speed1val = 0;
   speed2val = 0;
   speed3val = 0;
-  speed4val = 0;
 }
