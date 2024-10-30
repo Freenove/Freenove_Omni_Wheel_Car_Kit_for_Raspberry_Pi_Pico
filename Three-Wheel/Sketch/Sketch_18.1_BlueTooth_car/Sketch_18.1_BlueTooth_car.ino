@@ -259,6 +259,9 @@ void setup() {
   // IR initialization
   IR_Init(22);  
 
+  bluetooth.println("AT+NAME=BT05");  // Change Bluetooth device name
+  delay(200);
+
   int current_millis = millis();
   while(millis() - current_millis < 500)
   {
@@ -266,7 +269,7 @@ void setup() {
     angle_head = angle;
   }
 
-  // tone(PIN_BUZZER, 2000, 200);
+  tone(PIN_BUZZER, 2000, 200);
 
   // Timer interrupt Settings
   ITimer0.attachInterruptInterval(TIMER0_INTERVAL_MS, timer_1ms_control);

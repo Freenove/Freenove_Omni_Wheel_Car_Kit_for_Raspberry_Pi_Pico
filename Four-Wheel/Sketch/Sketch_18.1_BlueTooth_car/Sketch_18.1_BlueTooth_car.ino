@@ -215,6 +215,10 @@ bool timer_1ms_control(struct repeating_timer *t) {
       }
       if (millis() % 15 == 0) {
         speed_calculate();    // Find the average speed and filter the burrs
+        if(Ultrasonic_angle > 360)
+          Ultrasonic_angle -= 360;
+        if(Ultrasonic_angle < 0)
+          Ultrasonic_angle += 360;
         Ultrasonic_Run(Ultrasonic_speed, Ultrasonic_angle);
       }
     }
@@ -254,6 +258,9 @@ void setup() {
 
   // IR initialization
   IR_Init(22);  
+
+  bluetooth.println("AT+NAME=BT05");  // Change Bluetooth device name
+  delay(200);
 
   int current_millis = millis();
   while(millis() - current_millis < 500)

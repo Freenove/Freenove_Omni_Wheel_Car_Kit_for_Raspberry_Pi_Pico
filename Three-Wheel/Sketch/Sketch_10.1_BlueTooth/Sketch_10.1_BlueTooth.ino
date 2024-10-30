@@ -15,11 +15,14 @@ void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);     // Set the baud rate of the serial port to 9600
   bluetooth.begin(115200);// Set the baud rate of the Bluetooth to 115200
+  bluetooth.println("AT+NAME=BT05");  // Change Bluetooth device name
+  delay(200);
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
   if (bluetooth.available() > 0) {
-    Serial.println(bluetooth.readString());// Print the received characters
+    String message = bluetooth.readStringUntil('\n'); // Get the transmitted instruction
+    Serial.println(message);
   }
 }

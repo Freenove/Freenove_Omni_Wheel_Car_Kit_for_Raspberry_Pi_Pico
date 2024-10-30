@@ -26,7 +26,6 @@ void car_stop();
 void Turn_Control(int speed_v,int speed_a,int angle_v,int angle_a,int location,int mode);
 void Ultrasonic_Run(int speed_v,int angle_a);
 void Ultrasonic_control();
-void Ultrasonic_Run(int speed_v,int angle_a);
 void IR_run(int speed_v,int speed_a,int angle_v);
 void Motor_direction();
 void Circle_Control(float r, float V, float location);

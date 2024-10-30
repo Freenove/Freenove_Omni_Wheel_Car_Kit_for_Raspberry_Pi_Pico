@@ -12,8 +12,8 @@ void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
   Wire.begin();
-  imu.QMC5883L_SetOffsets(428,310,0);// Fill in the offset obtained by calibration
-  imu.QMC5883L_SetScales(1,1.03,0);// Fill in the Scale obtained by calibration
+  imu.QMC5883L_SetOffsets(76.5,452.5,0);// Fill in the offset obtained by calibration
+  imu.QMC5883L_SetScales(1,0.95,0);// Fill in the Scale obtained by calibration
   imu.Heading_Offset(360); 			// Set Heading offest
   imu.begin(CHOOSE_QMC5883L);		// Only QMC5883L is initialized
 }

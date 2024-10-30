@@ -1,5 +1,5 @@
 #include <Adafruit_NeoPixel.h>
-#include "WS2812.h"
+#include "LED.h"
 
 int ws2812_task_mode = 0;
 int ws2812_strip_time_now;

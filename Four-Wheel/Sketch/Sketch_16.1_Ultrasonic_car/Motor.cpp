@@ -8,8 +8,8 @@
 extern const int wheel1_A_pin = 8; // Motor1 drive pin
 extern const int wheel1_B_pin = 9; // Motor1 drive pin
 
-extern const int wheel2_A_pin = 13;// Motor2 drive pin
-extern const int wheel2_B_pin = 12;// Motor2 drive pin
+extern const int wheel2_A_pin = 12;// Motor2 drive pin
+extern const int wheel2_B_pin = 13;// Motor2 drive pin
 
 extern const int wheel3_A_pin = 15;// Motor3 drive pin
 extern const int wheel3_B_pin = 14;// Motor3 drive pin
@@ -84,6 +84,7 @@ void Ultrasonic_Run(int speed_v,int angle_a)
 
 void Ultrasonic_control()
 {
+  delay(2);
   if((millis() - Ultrasonic_distance_time) > 20)
   {
     Ultrasonic_distance = Read_Distance();

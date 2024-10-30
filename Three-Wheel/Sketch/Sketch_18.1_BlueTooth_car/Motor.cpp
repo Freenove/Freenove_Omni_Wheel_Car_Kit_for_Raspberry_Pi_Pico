@@ -275,6 +275,7 @@ void Ultrasonic_Run(int speed_v,int angle_a)
 
 void Ultrasonic_control()
 {
+  delay(2);
   if((millis() - Ultrasonic_distance_time) > 20)
   {
     Ultrasonic_distance = Read_Distance();

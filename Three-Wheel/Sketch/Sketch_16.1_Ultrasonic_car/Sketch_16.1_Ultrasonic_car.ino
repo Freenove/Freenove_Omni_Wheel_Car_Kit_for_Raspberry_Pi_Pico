@@ -18,7 +18,6 @@
 #include "Pid.h"
 
 #include "Ultrasonic.h"
-#include "SoftwareSerial.h"
 
 #define TIMER0_INTERVAL_MS 1000
 

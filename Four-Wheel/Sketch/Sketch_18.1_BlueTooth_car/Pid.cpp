@@ -1,15 +1,8 @@
 #include "Pid.h"
 #include "Arduino.h"
 
-#define Car_4_wheel
-
-#ifndef Car_4_wheel
-  float speed_p = 2.0,speed_i = 0,speed_d = 3.4;
-  float angle_p = 0.95,angle_i = 0 ,angle_d = 3.1;
-#else
-  float speed_p = 2.0,speed_i = 0,speed_d = 3.4;
-  float angle_p = 0.9,angle_i = 0 ,angle_d = 1.4;
-#endif
+float speed_p = 2.0,speed_i = 0,speed_d = 3.4;
+float angle_p = 0.95,angle_i = 0 ,angle_d = 3.1;
 
 int speed1_error,speed1_lasterror,speed1_integral,speed1_Maxintegral,speed1_output,speed1_Maxoutput;
 
