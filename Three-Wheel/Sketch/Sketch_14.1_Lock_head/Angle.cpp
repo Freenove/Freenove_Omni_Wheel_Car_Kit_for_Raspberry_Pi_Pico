@@ -16,25 +16,6 @@ void IMU_Init()
 
 void IMU_GetData() 
 {
-    imu.Calculate(); // Calculate the raw data
-    float newValue = imu.Data_Fusion(); // Get fusion data
-
-    // Define the smoothing factor
-    float alpha = 0.1; // 0 < alpha < 1, the smaller the smoother, the larger the more sensitive
-
-    // Calculate the difference between the current Angle and the new value
-    float diff = newValue - angle;
-
-    // Handle cases that cross 0 degrees
-    if (diff > 180) {
-        diff -= 360;
-    } else if (diff < -180) {
-        diff += 360;
-    }
-
-    // Use weighted average to update angles
-    angle += alpha * diff;
-
-    // Make sure the result is in the range [0, 360)
-    angle = fmod(angle + 360, 360);
+  imu.Calculate(); // Calculate the raw data
+  angle = imu.Data_Fusion(); // Get fusion data
 }

@@ -65,6 +65,9 @@ void setup() {
   // Encoder initialization
   Encoder_Init();
 
+  bluetooth.println("AT+NAME=BT05");  // Change Bluetooth device name
+  delay(200);
+
   // Timer interrupt setting
   ITimer0.attachInterruptInterval(TIMER0_INTERVAL_MS, timer_1ms_control);
 

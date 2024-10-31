@@ -131,7 +131,7 @@ float Angle_PID_Realize(float target, float feedback)
         Angle_error+=360;
     }
     if(Angle_error < 2 && Angle_error > -2) Angle_error = 0;
-    
+    Angle_error = target - feedback;
     Angle_integral += Angle_error;
 
     Angle_output = (angle_p * Angle_error) + (angle_i * Angle_integral) + (angle_d * (Angle_error - Angle_lasterror));

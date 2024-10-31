@@ -121,6 +121,9 @@ void setup() {
   // Motor initialization
   Motor_init();  
 
+  bluetooth.println("AT+NAME=BT05");  // Change Bluetooth device name
+  delay(200);
+
   int current_millis = millis();
   while(millis() - current_millis < 500)
   {
