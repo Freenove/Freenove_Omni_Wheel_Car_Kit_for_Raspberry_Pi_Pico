@@ -49,7 +49,6 @@ extern int flagCode;
 uint32_t current_millis;
 
 RPI_PICO_Timer ITimer0(0);
-SoftwareSerial bluetooth(1, 0);
 
 bool timer_1ms_control(struct repeating_timer *t) {
   if (millis() % 5 == 0) {
@@ -66,7 +65,7 @@ bool timer_1ms_control(struct repeating_timer *t) {
         Ultrasonic_angle -= 360;
     if(Ultrasonic_angle < 0)
         Ultrasonic_angle += 360;
-    Ultrasonic_Run(Ultrasonic_speed, Ultrasonic_angle);
+    Ultrasonic_Run(Ultrasonic_speed, Ultrasonic_angle, 50);
   }
   return true;
 }
@@ -96,7 +95,7 @@ void setup() {
 }
 
 void loop() {
-  Ultrasonic_control();
+  Ultrasonic_control(20, 1500, 20);
   if(IMU_state == 1)
   {
     IMU_GetData();

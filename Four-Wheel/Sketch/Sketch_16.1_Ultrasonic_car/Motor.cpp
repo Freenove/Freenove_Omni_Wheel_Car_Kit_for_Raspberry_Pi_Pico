@@ -64,11 +64,17 @@ void Motor_direction()// Motor limiting and motor output
   analogWrite(wheel4_A_pin,a4);
   analogWrite(wheel4_B_pin,b4);
 }
-
-void Ultrasonic_Run(int speed_v,int angle_a)
+/*
+  function: Ultrasonic_Run
+  parameter: 
+    speed_v: Target speed of the car.
+    angle_a: Target rotation angle of the car.
+    turn_speed: Target rotation speed of the car.
+*/
+void Ultrasonic_Run(int speed_v, int angle_a, int turn_speed)
 {
   angle_v = Angle_PID_Realize(angle_a,angle);
-  if(angle_v > 80) angle_v = 80;else if(angle_v < -80) angle_v = -80;
+  if(angle_v > turn_speed) angle_v = turn_speed;else if(angle_v < -turn_speed) angle_v = -turn_speed;
 
   v1 = angle_v;
   v2 = -speed_v + angle_v;
@@ -81,8 +87,14 @@ void Ultrasonic_Run(int speed_v,int angle_a)
   pid_v4 = Speed4_PID(v4,speed4);
   Motor_direction();
 }
-
-void Ultrasonic_control()
+/*
+  function: Ultrasonic_control
+  parameter: 
+    speed: The cruising speed of the car, the parameter size range is from 0 to 100.
+    turn_time: The time interval between the turns of the car, the unit is in milliseconds.
+    distance: the distance measurement of obstacles by the car, the unit is in centimeters.
+*/
+void Ultrasonic_control(int speed, int turn_time, int distance)
 {
   delay(2);
   if((millis() - Ultrasonic_distance_time) > 20)
@@ -92,9 +104,9 @@ void Ultrasonic_control()
   }
   if(Ultrasonic_mutex == 0)
   { 
-    if(Ultrasonic_distance > 15)// The distance is greater than 15cm
+    if(Ultrasonic_distance > distance)// The distance is greater than 20cm
     {
-      Ultrasonic_speed = 20;
+      Ultrasonic_speed = speed;
       Ultrasonic_angle = angle;
     }
     else{
@@ -108,42 +120,42 @@ void Ultrasonic_control()
       Ultrasonic_angle = Ultrasonic_angle - 90;
       Ultrasonic_state = 1;
       Ultrasonic_time = millis();// Obtain the system running time
-    }else if((millis() - Ultrasonic_time) > 1500 && Ultrasonic_state == 1)// Turn 90 degrees to the left
+    }else if((millis() - Ultrasonic_time) > turn_time && Ultrasonic_state == 1)// Turn 90 degrees to the left
     {
       Ultrasonic_compare[0] = Read_Distance();
       Ultrasonic_state = 2;
       Ultrasonic_time = millis();
-    }else if((millis() - Ultrasonic_time) > 1500 && Ultrasonic_state == 2)// Turn right back to the center
+    }else if((millis() - Ultrasonic_time) > turn_time && Ultrasonic_state == 2)// Turn right back to the center
     {
       Ultrasonic_angle = Ultrasonic_angle + 90;
       Ultrasonic_state = 3;
       Ultrasonic_time = millis();
-    }else if((millis() - Ultrasonic_time) > 1500 && Ultrasonic_state == 3)// stop
+    }else if((millis() - Ultrasonic_time) > turn_time && Ultrasonic_state == 3)// stop
     {
       Ultrasonic_state = 4;
       Ultrasonic_time = millis();
-    }else if((millis() - Ultrasonic_time) > 1500 && Ultrasonic_state == 4)// Turn 90 degrees to the right
+    }else if((millis() - Ultrasonic_time) > turn_time && Ultrasonic_state == 4)// Turn 90 degrees to the right
     {
       Ultrasonic_angle = Ultrasonic_angle + 90;
       
       Ultrasonic_state = 5;
       Ultrasonic_time = millis();
     }
-    else if((millis() - Ultrasonic_time) > 1500 && Ultrasonic_state == 5)// Turn 90 degrees to the right
+    else if((millis() - Ultrasonic_time) > turn_time && Ultrasonic_state == 5)// Turn 90 degrees to the right
     {
       Ultrasonic_compare[1] = Read_Distance();
       Ultrasonic_state = 6;
       Ultrasonic_time = millis();
-    }else if((millis() - Ultrasonic_time) > 1500 && Ultrasonic_state == 6)
+    }else if((millis() - Ultrasonic_time) > turn_time && Ultrasonic_state == 6)
     {
       Ultrasonic_angle = Ultrasonic_angle - 90;// Go back to the middle
       Ultrasonic_state = 7;
       Ultrasonic_time = millis();
-    }else if((millis() - Ultrasonic_time) > 1500 && Ultrasonic_state == 7)
+    }else if((millis() - Ultrasonic_time) > turn_time && Ultrasonic_state == 7)
     {
       Ultrasonic_state = 8;
       Ultrasonic_time = millis();
-    }else if((millis() - Ultrasonic_time) > 1500 && Ultrasonic_state == 8)
+    }else if((millis() - Ultrasonic_time) > turn_time && Ultrasonic_state == 8)
     {
       if(Ultrasonic_compare[0] > Ultrasonic_compare[1])
       {
@@ -155,9 +167,9 @@ void Ultrasonic_control()
       Ultrasonic_state = 9;
       Ultrasonic_time = millis();
     }
-    else if((millis() - Ultrasonic_time) > 1500 && Ultrasonic_state == 9)
+    else if((millis() - Ultrasonic_time) > turn_time && Ultrasonic_state == 9)
     {
-      Ultrasonic_speed = 20;
+      Ultrasonic_speed = speed;
       Ultrasonic_state = 0;
       Ultrasonic_mutex = 0;
     }

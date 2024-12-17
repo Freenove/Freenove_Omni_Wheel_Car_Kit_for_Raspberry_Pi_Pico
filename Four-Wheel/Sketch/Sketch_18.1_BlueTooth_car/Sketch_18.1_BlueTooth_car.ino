@@ -39,7 +39,7 @@ int angle_out = 0, speed_out = 0, speed1val, speed2val, speed3val, speed4val;
 
 static bool timer0Stopped = false;
 
-extern int angle, turn_output, angle_v,Ultrasonic_speed,Ultrasonic_angle,Ultrasonic_distance;
+extern int angle, turn_output, angle_v,Ultrasonic_speed,Ultrasonic_angle,Ultrasonic_distance, Ultrasonic_mutex, Ultrasonic_state;
 
 const int LED_Pin = 28;  // Define RGB color light pins
 
@@ -219,7 +219,7 @@ bool timer_1ms_control(struct repeating_timer *t) {
           Ultrasonic_angle -= 360;
         if(Ultrasonic_angle < 0)
           Ultrasonic_angle += 360;
-        Ultrasonic_Run(Ultrasonic_speed, Ultrasonic_angle);
+        Ultrasonic_Run(Ultrasonic_speed, Ultrasonic_angle, 50);
       }
     }
   }
@@ -292,7 +292,7 @@ void loop() {
   while(bluetooth_state)
   {
     if(state == Ultrasonic_mode)
-      Ultrasonic_control();
+      Ultrasonic_control(20, 1500, 20);
     if (imu_state == 1) {
       IMU_GetData();
       imu_state = 0;
@@ -315,6 +315,11 @@ void loop() {
         {
           angle_head = angle;
           angle_flag = angle_head;
+        }
+        if(state == Ultrasonic_mode)
+        {
+          Ultrasonic_mutex = 0;
+          Ultrasonic_state = 0;
         }
       }
       if(CmdArray[0] == CMD_CIRCLE)

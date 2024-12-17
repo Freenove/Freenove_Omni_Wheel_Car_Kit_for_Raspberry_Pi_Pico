@@ -10,9 +10,6 @@ const int encoderB2Pin = 11;// Encoder2 B pin
 const int encoderA3Pin = 16;// Encoder3 A pin
 const int encoderB3Pin = 17;// Encoder3 B pin
 
-const int encoderA4Pin = 18;// Encoder4 A pin
-const int encoderB4Pin = 19;// Encoder4 B pin
-
 const int wheel1_A_pin = 8; // Motor1 drive pin
 const int wheel1_B_pin = 9; // Motor1 drive pin
 

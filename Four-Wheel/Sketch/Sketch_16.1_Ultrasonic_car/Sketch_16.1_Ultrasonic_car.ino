@@ -31,22 +31,22 @@ uint32_t current_millis;
 RPI_PICO_Timer ITimer0(0);
 
 bool timer_1ms_control(struct repeating_timer *t) {
-    if (millis() % 5 == 0) {
-      Getencoder_Data();
-      speed_add();
-    }
-    if(millis() % 10 == 0)
-    {
-      IMU_state = 1;
-    }
-    if (millis() % 15 == 0) {
-      speed_calculate();    // Find the average speed and filter the burrs
-      if(Ultrasonic_angle > 360)
-        Ultrasonic_angle -= 360;
-      if(Ultrasonic_angle < 0)
-        Ultrasonic_angle += 360;
-      Ultrasonic_Run(Ultrasonic_speed, Ultrasonic_angle);
-    }
+  if (millis() % 5 == 0) {
+    Getencoder_Data();
+    speed_add();
+  }
+  if(millis() % 10 == 0)
+  {
+    IMU_state = 1;
+  }
+  if (millis() % 15 == 0) {
+    speed_calculate();    // Find the average speed and filter the burrs
+    if(Ultrasonic_angle > 360)
+      Ultrasonic_angle -= 360;
+    if(Ultrasonic_angle < 0)
+      Ultrasonic_angle += 360;
+    Ultrasonic_Run(Ultrasonic_speed, Ultrasonic_angle, 50);
+  }
   return true;
 }
 
@@ -75,7 +75,7 @@ void setup() {
 }
 
 void loop() {
-  Ultrasonic_control();
+  Ultrasonic_control(20, 1500, 20);
   if(IMU_state == 1)
   {
     IMU_GetData();
