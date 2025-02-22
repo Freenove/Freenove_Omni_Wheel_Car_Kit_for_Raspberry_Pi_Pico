@@ -113,7 +113,7 @@ void Get_Command(String inputStringTemp) {
   // Converts an array of String type to a Char type array
   inputStringTemp.toCharArray(str, string_length);
   char *token = strtok(str, INTERVAL_CHAr);  // Split the array
-  CmdArray[0] = token[0];                    // Put the command into an array
+  CmdArray[0] = String(token[0]);                    // Put the command into an array
   for (int i = 0; i < 5; i++) {
     if (token != NULL) {           
       // Continue splitting the array until # is not detected

@@ -370,7 +370,7 @@ void Get_Command(String inputStringTemp) {
   char str[string_length];
   inputStringTemp.toCharArray(str, string_length);
   char *token = strtok(str, INTERVAL_CHAr); 
-  CmdArray[0] = token[0];                  
+  CmdArray[0] = String(token[0]);                    // Put the command into an array               
   for (int i = 0; i < 5; i++) {
     if (token != NULL) {
       token = strtok(NULL, INTERVAL_CHAr);

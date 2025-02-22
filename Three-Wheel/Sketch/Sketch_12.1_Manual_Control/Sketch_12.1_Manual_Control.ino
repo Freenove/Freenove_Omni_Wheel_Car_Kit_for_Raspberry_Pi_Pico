@@ -122,7 +122,7 @@ void Get_Command(String inputStringTemp) {
   // Split the array
   char *token = strtok(str, INTERVAL_CHAr);  
   // Put the command into an array
-  CmdArray[0] = token[0];                
+  CmdArray[0] = String(token[0]);                    // Put the command into an array               
   for (int i = 0; i < 5; i++) {
     if (token != NULL) {
       // Continue splitting the array until # is not detected

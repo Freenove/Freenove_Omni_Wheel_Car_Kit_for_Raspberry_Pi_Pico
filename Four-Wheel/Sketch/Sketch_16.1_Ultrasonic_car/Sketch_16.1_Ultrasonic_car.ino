@@ -91,10 +91,10 @@ void speed_add() {
 }
 
 void speed_calculate() {
-  speed1 = map(speed1val / 3,0,50,0,100);
-  speed2 = map(speed2val / 3,0,50,0,100);
-  speed3 = map(speed3val / 3,0,50,0,100);
-  speed4 = map(speed4val / 3,0,50,0,100);
+  speed1 = map(speed1val / 3,0,48,0,100);
+  speed2 = map(speed2val / 3,0,48,0,100);
+  speed3 = map(speed3val / 3,0,48,0,100);
+  speed4 = map(speed4val / 3,0,48,0,100);
 
   speed1val = 0;
   speed2val = 0;
