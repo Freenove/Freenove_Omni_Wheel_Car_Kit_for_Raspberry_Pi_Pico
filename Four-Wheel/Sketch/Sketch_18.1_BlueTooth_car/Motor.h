@@ -1,26 +1,38 @@
 #ifndef __Motor_h__
 #define __Motor_h__
 
-#define Manual_Control   0
-#define Free_hand        1
-#define Lock_hand        2
-#define Around_mode      3
-#define Ultrasonic_mode  4
+#include "PID.h"
+#include "Ultrasonic.h"
+#include "Encoder.h"
+#include "Control.h"
 
-#define clockwise        0
-#define anticlockwise    1
+#define Car_4_wheel
 
-#define ENTER               '\n'                  //ENTER
-#define INTERVAL_CHAR       '#'                   //INTERVAL CHAR
+#define Manual_Control       0
+#define Free_hand            1
+#define Lock_hand            2
+#define Around_mode          3
+#define Ultrasonic_mode      4
+    
+#define clockwise            0
+#define anticlockwise        1
 
-#define CMD_LED_Bluetooth    "C"           //Car control command
-#define CMD_MOTOR_Bluetooth  "A"           //Car control command
-#define CMD_BUZZER_Bluetooth "D"           //Car control command
-#define CMD_STATE_Bluetooth  "M"           //Car control command
-#define CMD_CIRCLE           "B"           //Car control command
+#define ENTER                '\n'          //ENTER
+#define INTERVAL_CHAR        '#'           //INTERVAL CHAR
+
+#define CMD_LED_Bluetooth    'C'           //Car control command
+#define CMD_MOTOR_Bluetooth  'A'           //Car control command
+#define CMD_BUZZER_Bluetooth 'D'           //Car control command
+#define CMD_STATE_Bluetooth  'M'           //Car control command
+#define CMD_CIRCLE           'B'           //Car control command
 
 const char INTERVAL_CHAr[1] = {'#'};
+extern int angle_head, angle_absolute;
+extern int turn_output, angle_v;
+extern int angle_head;
 
+void updatePID();
+void calculateWheelSpeed(int angle_point=0);
 void Motor_init();
 void car_stop();
 void Turn_Control(int speed_v,int speed_a,int angle_v,int angle_a,int location,int mode);

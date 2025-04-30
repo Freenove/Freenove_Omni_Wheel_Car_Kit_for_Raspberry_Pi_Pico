@@ -1,5 +1,6 @@
 #include "Arduino.h"
 #include "Encoder.h"
+#include "Motor.h"
 
 const int encoderA1Pin = 6; // Encoder1 A pin
 const int encoderB1Pin = 7; // Encoder1 B pin
@@ -10,6 +11,9 @@ const int encoderB2Pin = 11;// Encoder2 B pin
 const int encoderA3Pin = 16;// Encoder3 A pin
 const int encoderB3Pin = 17;// Encoder3 B pin
 
+const int encoderA4Pin = 18;// Encoder4 A pin
+const int encoderB4Pin = 19;// Encoder4 B pin
+
 const int wheel1_A_pin = 8; // Motor1 drive pin
 const int wheel1_B_pin = 9; // Motor1 drive pin
 
@@ -19,12 +23,14 @@ const int wheel2_B_pin = 13;// Motor2 drive pin
 const int wheel3_A_pin = 15;// Motor3 drive pin
 const int wheel3_B_pin = 14;// Motor3 drive pin
 
-int encoder1Pos = 0,encoder2Pos = 0,encoder3Pos = 0;
-int lastEncoded1 = 0,lastEncoded2 = 0,lastEncoded3 = 0;
-int speed1,speed2,speed3;
+const int wheel4_A_pin = 20;// Motor4 drive pin
+const int wheel4_B_pin = 21;// Motor4 drive pin
 
-int encoder1,encoder2,encoder3;
-
+int encoder1Pos = 0,encoder2Pos = 0,encoder3Pos = 0,encoder4Pos = 0;
+int lastEncoded1 = 0,lastEncoded2 = 0,lastEncoded3 = 0,lastEncoded4 = 0;
+int speed1,speed2,speed3,speed4;
+int speed1val, speed2val, speed3val, speed4val;
+int encoder1,encoder2,encoder3,encoder4;
 
 void Encoder_Init()
 {
@@ -34,7 +40,11 @@ void Encoder_Init()
   pinMode(encoderB2Pin,INPUT);
   pinMode(encoderA3Pin,INPUT);
   pinMode(encoderB3Pin,INPUT);
-
+  #ifdef Car_4_wheel
+    pinMode(encoderA4Pin,INPUT);
+    pinMode(encoderB4Pin,INPUT);
+  #endif
+  
   attachInterrupt(digitalPinToInterrupt(encoderA1Pin), Getencoder, CHANGE);
   attachInterrupt(digitalPinToInterrupt(encoderB1Pin), Getencoder, CHANGE);
 
@@ -43,6 +53,11 @@ void Encoder_Init()
 
   attachInterrupt(digitalPinToInterrupt(encoderA3Pin), Getencoder, CHANGE);
   attachInterrupt(digitalPinToInterrupt(encoderB3Pin), Getencoder, CHANGE);
+
+  #ifdef Car_4_wheel
+    attachInterrupt(digitalPinToInterrupt(encoderA4Pin), Getencoder, CHANGE);
+    attachInterrupt(digitalPinToInterrupt(encoderB4Pin), Getencoder, CHANGE);
+  #endif
 }
 
 // The interrupt function that gets the encoder encoded value
@@ -56,6 +71,11 @@ void Getencoder()
   
   int MSB3 = digitalRead(encoderA3Pin);
   int LSB3 = digitalRead(encoderB3Pin);
+
+  #ifdef Car_4_wheel
+    int MSB4 = digitalRead(encoderA4Pin);
+    int LSB4 = digitalRead(encoderB4Pin);
+  #endif
 
   int encoded1 = (MSB1 << 1) | LSB1;
   int sum1 = (lastEncoded1 << 2) | encoded1;
@@ -75,9 +95,20 @@ void Getencoder()
   if (sum3 == 0b1101 || sum3 == 0b0100 || sum3 == 0b0010 || sum3 == 0b1011) encoder3Pos++;
   if (sum3 == 0b1110 || sum3 == 0b0111 || sum3 == 0b0001 || sum3 == 0b1000) encoder3Pos--;
 
+  #ifdef Car_4_wheel
+    int encoded4 = (MSB4 << 1) | LSB4;
+    int sum4 = (lastEncoded4 << 2) | encoded4;
+
+    if (sum4 == 0b1101 || sum4 == 0b0100 || sum4 == 0b0010 || sum4 == 0b1011) encoder4Pos++;
+    if (sum4 == 0b1110 || sum4 == 0b0111 || sum4 == 0b0001 || sum4 == 0b1000) encoder4Pos--;
+  #endif
+
   lastEncoded1 = encoded1;
   lastEncoded2 = encoded2;
   lastEncoded3 = encoded3;
+  #ifdef Car_4_wheel
+    lastEncoded4 = encoded4;
+  #endif
 }
 
 void Getencoder_Data()
@@ -86,8 +117,39 @@ void Getencoder_Data()
   speed1 = encoder1Pos;
   speed2 = encoder2Pos;
   speed3 = encoder3Pos;
+  #ifdef Car_4_wheel
+    speed4 = encoder4Pos;
+  #endif
   
   encoder1Pos = 0;
   encoder2Pos = 0;
   encoder3Pos = 0;
+  #ifdef Car_4_wheel
+    encoder4Pos = 0;
+  #endif
+}
+
+void speed_add() {
+  speed1val += speed1;
+  speed2val += speed2;
+  speed3val += speed3;
+  #ifdef Car_4_wheel
+    speed4val += speed4;
+  #endif
+}
+
+void speed_calculate() {
+  speed1 = map(speed1val / 3,0,48,0,100);
+  speed2 = map(speed2val / 3,0,48,0,100);
+  speed3 = map(speed3val / 3,0,48,0,100);
+  #ifdef Car_4_wheel
+    speed4 = map(speed4val / 3,0,48,0,100);
+  #endif
+
+  speed1val = 0;
+  speed2val = 0;
+  speed3val = 0;
+  #ifdef Car_4_wheel
+    speed4val = 0;
+  #endif
 }

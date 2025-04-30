@@ -5,6 +5,8 @@
 
 #define WS2812_PIN 28        //Control pins for Pico W
 #define LEDS_COUNT 4
+
+const int LED_Pin = 28;  // Define RGB color light pins
 extern int ws2812_task_mode; //WS2812 run mode                
 
 void WS2812_Setup(void);                                                                                   //WS2812 initialization function

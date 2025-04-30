@@ -2,7 +2,7 @@
 #include "Arduino.h"
 
 float speed_p = 2.0,speed_i = 0,speed_d = 3.4;
-float angle_p = 0.95,angle_i = 0 ,angle_d = 3.1;
+float angle_p = 0.9,angle_i = 0 ,angle_d = 1.4;
 
 int speed1_error,speed1_lasterror,speed1_integral,speed1_Maxintegral,speed1_output,speed1_Maxoutput;
 
@@ -13,8 +13,6 @@ int speed3_error,speed3_lasterror,speed3_integral,speed3_Maxintegral,speed3_outp
 int speed4_error,speed4_lasterror,speed4_integral,speed4_Maxintegral,speed4_output,speed4_Maxoutput;
 
 int Angle_error,Angle_lasterror,Angle_integral,Angle_output;
-
-int Turn_error,Turn_lasterror,Turn_integral,Turn_output;
 
 float Speed1_PID(float target,float feedback)
 {

@@ -1,7 +1,6 @@
-#include "IMU_Fusion_SYC.h"
+#include "Angle.h"
 
 float AccMagnitude;
-
 int angle;
 
 IMU imu(Wire);

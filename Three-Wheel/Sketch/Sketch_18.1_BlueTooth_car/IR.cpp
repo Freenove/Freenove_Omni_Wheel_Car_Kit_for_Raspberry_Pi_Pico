@@ -9,12 +9,11 @@ int endTime, end2Time,irPin,IR_v ,IR_a,IR_angle_v;
 int flagCode = 0,irValue; 
 bool irState = true, IR_Enable = false; 
 extern int state;
- 
-void IR_Init(int pin) { 
-  irPin = pin; 
-  pinMode(irPin, INPUT_PULLUP); 
-  attachInterrupt(digitalPinToInterrupt(irPin), IR_Read, CHANGE); 
-} 
+
+void IR_Init() { 
+  pinMode(22, INPUT_PULLUP); 
+  attachInterrupt(digitalPinToInterrupt(22), IR_Read, CHANGE); 
+}
  
 void IR_Read() 
 { 
@@ -82,18 +81,19 @@ void IR_Release(){
   irState=true; 
 }
 
-void IR_Receive()
+int IR_Receive()
 {
   if(flagCode){ 
     irValue = IR_Decode(flagCode); 
     Serial.println(irValue, HEX); 
     IR_Release(); 
   } 
+  return irValue;
 }
 
 void IR_Task()
 {
-  switch (irValue) {
+  switch (IR_Receive()) {
       case 0xFF02FD:  // go straight
         IR_v = 30;
         IR_a = 0;
