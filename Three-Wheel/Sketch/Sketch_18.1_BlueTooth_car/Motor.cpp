@@ -144,9 +144,9 @@ void Turn_Control(int speed_v, int speed_a, int angle_v, int angle_a, int locati
         v1 = angle_v;
         v2 = angle_v;
         v3 = angle_v;
-#ifdef Car_4_wheel
-        v4 = angle_v;
-#endif
+        #ifdef Car_4_wheel
+          v4 = angle_v;
+        #endif
       } else if (angle_counter < 4) {
         angle_flag = angle;
         vx = -speed_v * sin((angle_flag - angle_head + speed_a) * PI / 180);
