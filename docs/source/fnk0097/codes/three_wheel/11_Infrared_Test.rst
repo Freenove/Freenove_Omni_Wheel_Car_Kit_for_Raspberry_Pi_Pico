@@ -100,5 +100,3 @@ Allow to receive new infrared key values again.
 
 .. image:: ../../codes/_static/imgs/11_Infrared_Test/Chapter11_07.png
     :align: center
-
-The port description of the Bluetooth module is as follows:

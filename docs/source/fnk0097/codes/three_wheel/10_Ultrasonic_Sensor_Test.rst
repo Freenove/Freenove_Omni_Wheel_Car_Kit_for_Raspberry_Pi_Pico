@@ -13,6 +13,8 @@ The Ultrasonic Ranging Module uses the principle that ultrasonic waves will refl
 The HC-SR04 Ultrasonic Ranging Module integrates both an ultrasonic transmitter and a receiver. The transmitter is used to convert electrical signals (electrical energy) into high frequency (beyond human hearing) sound waves (mechanical energy) and the function of the receiver is opposite of this. The picture and the diagram of the HC SR04 Ultrasonic Ranging Module are shown below:
 
 .. list-table:: 
+    :align: center
+    :class: table-line
     
     * - |Chapter10_01|
       - |Chapter10_02|

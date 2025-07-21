@@ -33,6 +33,7 @@ Port description of DRV8837 is as follows:
 
 .. table:: 
     :class: freenove-ow
+    :align: center
 
     +-------------+-----------------------------------------------------------------------------------------+
     |     PIN     |                                       DESCRIPTION                                       |
@@ -73,6 +74,7 @@ Here is the truth table for the motor states:
 
 .. table:: 
     :class: freenove-ow
+    :align: center
 
     +--------+--------+----------------------------------+
     | Mx_IN1 | Mx_IN2 | Rotating direction of the wheels |
@@ -96,12 +98,14 @@ Next, we will start to learn the circuit connection of the car. As shown below, 
 
 As can be seen from the schematic above, GPIO8 and GPIO9 controls motor M1, GPIO12 and GPIO13 controls M2, GPIO14 and GPIO15 controls M3
 
-Note: The 'x' in Mx_IN1 should be between 1 and 3, corresponding to the identification numbers of the three motors. For instance, M1_IN1 refers to the first control pin for Motor 1, while M1_IN2 refers to the second control pin for Motor 1. Both pins are used in conjunction to control the motor's operations such as forward motion, reverse motion, and halting, where a 0 signifies a low voltage state and a 1 indicates a high voltage state.
+.. note::
+    
+    The 'x' in Mx_IN1 should be between 1 and 3, corresponding to the identification numbers of the three motors. For instance, M1_IN1 refers to the first control pin for Motor 1, while M1_IN2 refers to the second control pin for Motor 1. Both pins are used in conjunction to control the motor's operations such as forward motion, reverse motion, and halting, where a 0 signifies a low voltage state and a 1 indicates a high voltage state.
 
 Sketch
 ===============================
 
-Next, we download the code to Raspberry Pi Pico (W) to test the motor. Open "Sketch_02.1_Motor" folder under "Freenove_Omni_Wheel_Car_Kit_for_Raspberry_Pi_Pico\\Three-Wheel\\Sketch" and double-click "Sketch_02.1_Motor.ino". 
+Next, we download the code to Raspberry Pi Pico (W) to test the motor. Open **"Sketch_02.1_Motor"** folder under **"Freenove_Omni_Wheel_Car_Kit_for_Raspberry_Pi_Pico\\Three-Wheel\\Sketch"** and double-click **"Sketch_02.1_Motor.ino"**. 
 
 .. image:: ../../codes/_static/imgs/4_Motor_Test_/Chapter04_07.png
     :align: center
@@ -114,18 +118,18 @@ Code
     :language: C
     :dedent:
 
-This code is to control the motors to rotate. Click "Upload" to upload the code to Pico.
+This code is to control the motors to rotate. Click "**Upload**" to upload the code to Pico.
 
 .. image:: ../../codes/_static/imgs/4_Motor_Test_/Chapter04_08.png
     :align: center
 
 After the code finishes uploading, you can see Motor M1 rotate forward for one second, and then halt for one second, followed by rotating reversely for one second.
 
-Notes:
+.. note::
 
-1. The expansion board is designed with an anti-reverse flow circuit. If the motor does not respond after the code uploads, please check whether the power switch on the car expansion board is turned on.
+    1. The expansion board is designed with an anti-reverse flow circuit. If the motor does not respond after the code uploads, please check whether the power switch on the car expansion board is turned on.
 
-2. There is a switch on the battery holder; please check if it is turned on.
+    2. There is a switch on the battery holder; please check if it is turned on.
 
 .. image:: ../../codes/_static/imgs/4_Motor_Test_/Chapter04_09.png
     :align: center
@@ -211,7 +215,7 @@ The longer the PWM duty cycle is, the higher the output power will be. Now that 
 Sketch
 ============================================
 
-Next, we download the code to Raspberry Pi Pico (W) to change the speed of the motors through PWM. Open "Sketch_02.2_Motor_PWM" folder under "Freenove_Omni_Wheel_Car_Kit_for_Raspberry_Pi_Pico\\Three-Wheel\\Sketch" and double-click "Sketch_02.2_Motor_PWM.ino". 
+Next, we download the code to Raspberry Pi Pico (W) to change the speed of the motors through PWM. Open **"Sketch_02.2_Motor_PWM"** folder under **"Freenove_Omni_Wheel_Car_Kit_for_Raspberry_Pi_Pico\\Three-Wheel\\Sketch"** and double-click **"Sketch_02.2_Motor_PWM.ino"**. 
 
 .. image:: ../../codes/_static/imgs/4_Motor_Test_/Chapter04_12.png
     :align: center
@@ -293,7 +297,9 @@ The gear set inside the gearbox can be simplified as the following model:
 
 In this model, when the rotor connection shaft rotates N times, the main shaft rotates once, achieving the purpose of reducing the motor speed while increasing the motor torque. At this point, the reduction ratio of the motor is 1:N.
 
-:red:`Note that the value of N is determined by the specific parameters of the motor. In the omnidirectional wheel robot, we provide a motor with a reduction ratio of 1:48, meaning the rotor connection shaft rotates 48 times for the main shaft to rotate once.`
+.. note::
+
+    :combo:`red font-bolder:The value of N is determined by the specific parameters of the motor. In the omnidirectional wheel robot, we provide a motor with a reduction ratio of 1:48, meaning the rotor connection shaft rotates 48 times for the main shaft to rotate once.`
 
 If you need any support, please feel free to contact us via: support@freenove.com
 
@@ -355,10 +361,12 @@ M2_A corresponds to GPIO10
 M2_B corresponds to GPIO11
 
 M3_A corresponds to GPIO16
-
+   
 M3_B corresponds to GPIO17
 
-Please note that this car kit uses three 48:1 gear reduction TT motors with encoder. For each complete revolution of the wheels, the magnetic ring on the motor rotates 48 times. Each encoder motor outputs 13 pulses per revolution, resulting in a total of 2496 pulse signals for each complete turn of the motor.
+.. note::
+    
+    This car kit uses three 48:1 gear reduction TT motors with encoder. For each complete revolution of the wheels, the magnetic ring on the motor rotates 48 times. Each encoder motor outputs 13 pulses per revolution, resulting in a total of 2496 pulse signals for each complete turn of the motor.
 
 .. image:: ../../codes/_static/imgs/4_Motor_Test_/Chapter04_19.png
     :align: center
@@ -368,7 +376,7 @@ Sketch
 
 Next, we download the code to Raspberry Pi Pico (W) to have the TT motor with encoder read encoder value. 
 
-Open Sketch_02.3_Motor_Encoder" folder under "Freenove_Omni_Wheel_Car_Kit_for_Raspberry_Pi_Pico\\Three-Wheel\\Sketch" and double-click "Sketch_02.3_Motor_Encoder".
+Open **"Sketch_02.3_Motor_Encoder"** folder under **"Freenove_Omni_Wheel_Car_Kit_for_Raspberry_Pi_Pico\\Three-Wheel\\Sketch"** and double-click **"Sketch_02.3_Motor_Encoder"**.
 
 .. image:: ../../codes/_static/imgs/4_Motor_Test_/Chapter04_20.png
     :align: center
@@ -381,7 +389,7 @@ Code
     :language: C
     :dedent:
 
-This code allows the pico to change the motors' speed. Click "Upload" to download the code.
+This code allows the pico to change the motors' speed. Click **"Upload"** to download the code.
 
 .. image:: ../../codes/_static/imgs/4_Motor_Test_/Chapter04_21.png
     :align: center
@@ -448,7 +456,7 @@ Reference
 
     The logical OR operator is a logical operator commonly used for conditional testing. The rule for the logical OR operation is that if at least one side of the operator is true, the result is true; otherwise, it is false.
 
-.. py:function:: int digitalRead (int pin) ;
+.. py:function:: int digitalRead (int pin);
 
     This function returns the value read at the given pin. It will be "HIGH" or "LOW"(1 or 0) depending on the logic level at the pin.
 
@@ -474,6 +482,6 @@ Reference
     
     CHANGE: Triggered when the pin level changes.
 
-.. py:function:: digitalPinToInterrupt(uint8_t pin)
+.. py:function:: digitalPinToInterrupt (uint8_t pin)
 
     The digitalPinToInterrupt function maps a digital pin to its corresponding interrupt number. The interrupt numbers can vary between different controllers, so this function helps ensure that the correct interrupt is used for the specified digital pin.

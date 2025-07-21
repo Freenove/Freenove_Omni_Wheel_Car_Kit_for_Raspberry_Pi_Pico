@@ -7,53 +7,65 @@ Install Freenove app
 
 There are three ways to install our app.
 
-1.	Google Play Software
+1. Google Play Software
+=======================================
 
 Search "Freenove" on Google Play to download and install. 
 
 .. image:: ../../codes/_static/imgs/Freenove_app/App00.png
     :align: center
+    :width: 50%
 
-2.	Google Play Website
+2. Google Play Website
+=======================================
 
 Visit https://play.google.com/store/apps/details?id=com.freenove.suhayl.Freenove, and click install
 
 .. image:: ../../codes/_static/imgs/Freenove_app/App01.png
     :align: center
+    :width: 80%
 
-3.	Github
+3. Github
+=======================================
 
 Visit https://github.com/Freenove/Freenove_app_for_Android, download the files in this library, and install freenove.apk to your Android phone manually.
 
 .. image:: ../../codes/_static/imgs/Freenove_app/App02.png
     :align: center
+    :width: 80%
 
 Expand the options of "Code", and click "Download ZIP". 
 
 .. image:: ../../codes/_static/imgs/Freenove_app/App03.png
     :align: center
+    :width: 80%
 
-4.	iOS
+4. iOS
+=======================================
 
 Open App Store on your iPhone/iPad.
 
 .. image:: ../../codes/_static/imgs/Freenove_app/App04.png
     :align: center
+    :width: 20%
 
 Tap Search on the menu bar at the bottom
 
 .. image:: ../../codes/_static/imgs/Freenove_app/App05.png
     :align: center
+    :width: 80%
 
 Input freenove to search
 
 .. image:: ../../codes/_static/imgs/Freenove_app/App06.png
     :align: center
+    :width: 80%
 
 Click the icon to install.
 
 .. image:: ../../codes/_static/imgs/Freenove_app/App07.png
     :align: center
+    :width: 80%
 
 Introduction to the APP
 *************************************
@@ -65,16 +77,19 @@ Open application "Freenove", as shown below:
 
 .. image:: ../../codes/_static/imgs/Freenove_app/App08.png
     :align: center
+    :width: 80%
 
 Scroll down to find Omnidirectional wheel car and tap it.
 
 .. image:: ../../codes/_static/imgs/Freenove_app/App10.png
     :align: center
+    :width: 80%
 
 The interface is as shown below:
 
 .. image:: ../../codes/_static/imgs/Freenove_app/App09.png
     :align: center
+    :width: 80%
 
 Hardware_Communication_Protocol
 *************************************
@@ -82,16 +97,22 @@ Hardware_Communication_Protocol
 Supported Communication 
 =======================================
 
-+---------------+-----------------------+
-| Communication | Bluetooth Device Name |
-+===============+=======================+
-| Bluetooth     | BT05                  |
-+---------------+-----------------------+
+.. table:: 
+    :class: zebra
+    :align: center
+    :widths: 1 1
+    :width: 50%
+
+    +---------------+-----------------------+
+    | Communication | Bluetooth Device Name |
+    +===============+=======================+
+    | Bluetooth     | BT05                  |
+    +---------------+-----------------------+
 
 Communication Command Format
 ========================================
 
-The communication command format is as follows: 
+:combo:`font-bolder x-large:The communication command format is as follows:`
 
 "A#10#20#30#40#50#\\n".
 
@@ -127,7 +148,7 @@ Communication Protocol of FNK0097
 CMD_MOTOR_Bluetooth = "A"
 ---------------------------------------
 
-This command controls the car's basic movements.
+:combo:`font-bolder x-large:This command controls the car's basic movements.`
 
 Format: A#Parameter1#Parameter2#Parameter3#Parameter4\\n, where:
 
@@ -174,7 +195,7 @@ Format: A#Parameter1#Parameter2#Parameter3#Parameter4\\n, where:
 CMD_LED_Bluetooth = "C"
 -----------------------------------
 
-**This command is to change the LED modes.**
+:combo:`font-bolder x-large:This command is to change the LED modes.`
 
 .. table:: 
     :class: freenove-ow
@@ -198,7 +219,7 @@ CMD_LED_Bluetooth = "C"
 CMD_BUZZER_Bluetooth = "D"
 -----------------------------------
 
-**This command controls the buzzer.**
+:combo:`font-bolder x-large:This command controls the buzzer.`
 
 The frequency of the buzzer is fixed at 2000.
 
@@ -214,7 +235,7 @@ The frequency of the buzzer is fixed at 2000.
 CMD_POWER_Bluetooth = "F"
 -----------------------------------
 
-**This command checks the battery power.**
+:combo:`font-bolder x-large:This command checks the battery power.`
 
 The slave device proactively sends data to the master device in the format: P#Battery Voltage\n (Example: P#8.12\n). In the APP, this voltage value will be displayed, with the unit being millivolts (mv).
 
@@ -250,7 +271,7 @@ The slave device proactively sends data to the master device in the format: E#Di
 CMD_STATE_Bluetooth = "M"
 -----------------------------------
 
-**This command changes the car's mode.**
+:combo:`font-bolder x-large:This command changes the car's mode.`
 
 Format: M#Mode No.#\\n (Example: M#0#\\n)
 
@@ -276,7 +297,7 @@ APP Command Table
 CMD_CIRCLE_Bluetooth = "B"
 -----------------------------------
 
-Thi command changes the parameters of Around Mode.
+:combo:`font-bolder x-large:This command changes the parameters of Around Mode.`
 
 Format: B#circle direction#circle radus#\\n (Example: B#0#100#\\n)
 

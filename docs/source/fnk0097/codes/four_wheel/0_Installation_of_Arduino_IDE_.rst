@@ -7,7 +7,7 @@ Arduino Software
 
 Arduino Software (IDE) is used to write and upload the code for Arduino Board.
 
-First, install Arduino Software (IDE): visit https://www.arduino.cc, click "SOFTWARE" to enter the download page.
+First, install Arduino Software (IDE): visit https://www.arduino.cc, click "**SOFTWARE**" to enter the download page.
 
 .. image:: ../../codes/_static/imgs/0_Installation_of_Arduino_IDE_/Chapter00_00.png
     :align: center
@@ -31,19 +31,23 @@ The interface of Arduino Software is as follows:
 
 Programs written with Arduino Software (IDE) are called sketches. These sketches are written in the text editor and saved with the file extension.ino. The editor has features for cutting/pasting and searching/replacing text. The message area gives feedback while saving and exporting and also displays errors. The console displays text output by the Arduino Software (IDE), including complete error messages and other information. The bottom right-hand corner of the window displays the configured board and serial port. The toolbar buttons allow you to verify and upload programs, create, open, and save sketches, and open the serial monitor.
 
-+----------------+----------------+--------------------------------------------------------------------+
-| |Chapter00_04| | Verify         | Check your code for compile errors.                                |
-+----------------+----------------+--------------------------------------------------------------------+
-| |Chapter00_05| | Upload         | Compile your code and upload them to the configured board.         |
-+----------------+----------------+--------------------------------------------------------------------+
-| |Chapter00_06| | Debug          | Help you to detect and solve problems in the code                  |
-+----------------+----------------+--------------------------------------------------------------------+
-| |Chapter00_07| | Plotter        | Convert the information output to the serial port into a waveform  |
-|                |                |                                                                    |
-|                |                | chart for visual analysis                                          |
-+----------------+----------------+--------------------------------------------------------------------+
-| |Chapter00_08| | Serial Monitor | Open the serial monitor.                                           |
-+----------------+----------------+--------------------------------------------------------------------+
+.. table:: 
+    :class: table-line
+    :align: center
+
+    +----------------+----------------+--------------------------------------------------------------------+
+    | |Chapter00_04| | Verify         | Check your code for compile errors.                                |
+    +----------------+----------------+--------------------------------------------------------------------+
+    | |Chapter00_05| | Upload         | Compile your code and upload them to the configured board.         |
+    +----------------+----------------+--------------------------------------------------------------------+
+    | |Chapter00_06| | Debug          | Help you to detect and solve problems in the code                  |
+    +----------------+----------------+--------------------------------------------------------------------+
+    | |Chapter00_07| | Plotter        | Convert the information output to the serial port into a waveform  |
+    |                |                |                                                                    |
+    |                |                | chart for visual analysis                                          |
+    +----------------+----------------+--------------------------------------------------------------------+
+    | |Chapter00_08| | Serial Monitor | Open the serial monitor.                                           |
+    +----------------+----------------+--------------------------------------------------------------------+
 
 .. |Chapter00_04| image:: ../../codes/_static/imgs/0_Installation_of_Arduino_IDE_/Chapter00_04.png
 .. |Chapter00_05| image:: ../../codes/_static/imgs/0_Installation_of_Arduino_IDE_/Chapter00_05.png

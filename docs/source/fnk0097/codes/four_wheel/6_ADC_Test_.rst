@@ -35,7 +35,7 @@ The voltage acquisition range of GPIO27 on Raspberry Pi Pico (W) is 0-3.3V, whil
 Sketch
 ***********************************
 
-In this section, we will use GPIO27 of Raspberry Pi Pico (W) to read the voltage value of the batteries and print it on serial monitor. Open "Sketch_04.1_Battery_level" folder in "Freenove Four-wheeled omniwheel Car Kit for Raspberry Pi pico \\Sketches" and then double-click "Sketch_04.1_Battery_level.ino".
+In this section, we will use GPIO27 of Raspberry Pi Pico (W) to read the voltage value of the batteries and print it on serial monitor. Open **"Sketch_04.1_Battery_level"** folder in **"Freenove_Omni_Wheel_Car_Kit_for_Raspberry_Pi_Pico\Four-Wheel\Sketches"** and then double-click **"Sketch_04.1_Battery_level.ino"**.
 
 .. image:: ../../codes/_static/imgs/6_ADC_Test_/Chapter06_02.png
     :align: center

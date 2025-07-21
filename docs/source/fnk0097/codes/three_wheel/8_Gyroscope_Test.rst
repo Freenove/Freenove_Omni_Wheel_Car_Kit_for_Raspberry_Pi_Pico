@@ -78,12 +78,12 @@ Sketch
 
 As we use the I2C interface to read the gyroscope's data, we need to install the related library before use.
 
-Open Arduino IDE, click "Sketch" -> "Include Library" -> "Add.ZIP Library...".
+Open Arduino IDE, click **"Sketch"** -> **"Include Library"** -> **"Add.ZIP Library..."**.
 
 .. image:: ../../codes/_static/imgs/8_Gyroscope_Test/Chapter08_04.png
     :align: center
 
-Select "IMU_Fusion_SYC-master_v1.1.10.zip" under the directory of "Freenove Three-wheeled omniwheel Car Kit for Raspberry Pi pico\\Libraries".
+Select **"IMU_Fusion_SYC-master_v1.1.10.zip"** under the directory of **"Freenove Three-wheeled omniwheel Car Kit for Raspberry Pi pico\\Libraries"**.
 
 .. image:: ../../codes/_static/imgs/8_Gyroscope_Test/Chapter08_05.png
     :align: center
@@ -93,7 +93,7 @@ Wait for the installation to finish.
 .. image:: ../../codes/_static/imgs/8_Gyroscope_Test/Chapter08_06.png
     :align: center
 
-Open "Sketch_06.1_Gyroscope" folder in "Freenove_Omni_Wheel_Car_Kit_for_Raspberry_Pi_Pico\\Three-Wheel\\Sketches" and then double-click "Sketch_06.1_Gyroscope.ino".
+Open "Sketch_06.1_Gyroscope" folder in **"Freenove_Omni_Wheel_Car_Kit_for_Raspberry_Pi_Pico\\Three-Wheel\\Sketches"** and then double-click **"Sketch_06.1_Gyroscope.ino**".
 
 .. image:: ../../codes/_static/imgs/8_Gyroscope_Test/Chapter08_07.png
     :align: center
@@ -106,7 +106,7 @@ Code
     :language: c
     :dedent:
 
-Compile and upload the sketch. Do NOT touch the circuit board once the Upload button is clicked, until the message "Calibration complete" is printed.
+Compile and upload the sketch. Do NOT touch the circuit board once the Upload button is clicked, until the message **"Calibration complete"** is printed.
 
 After the gyroscope initialization is complete, it takes 1-3 seconds for self-calibration. During this process, please do not touch the circuit board to ensure more accurate calibration.
 

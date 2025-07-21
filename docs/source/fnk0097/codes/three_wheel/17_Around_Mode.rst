@@ -53,8 +53,10 @@ You only need to set one of the values for Va or Vb to determine the radius of t
 
 .. math:: 
 
-    &\boldsymbol{V_b = \frac{R}{V_a}} 
-
+    &\boldsymbol{V_a = {R} \cdot {V_b}} 
+    
+    &\boldsymbol{V_b = \frac{V_a}{R}} 
+    
     \\
     
     &\boldsymbol{V_x = -V_a \cdot \sin 90^\circ} 
@@ -69,7 +71,9 @@ You only need to set one of the values for Va or Vb to determine the radius of t
 
     &\boldsymbol{v_3 = V_x + V_b}
 
-Please note: R and Va in the formula are the values that need to be set, and V1, V2, V3, are the linear speeds of the three wheels.
+.. note::
+    
+    R and Va in the formula are the values that need to be set, and V1, V2, V3, are the linear speeds of the three wheels.
 
 .. image:: ../../codes/_static/imgs/17_Around_Mode/Chapter17_02.png
     :align: center
@@ -119,11 +123,11 @@ Determine the input parameter; when the parameter is "clockwise", the car circle
 About Around mode
 ***************************
 
-For the connection of Bluetooth device, please refer to Freenove APP-Connection
+For the connection of Bluetooth device, please refer to :ref:`fnk0097/codes/three_wheel/freenove_app:introduction to the app`
 
 Please note that the example code for this part does not involve Bluetooth. 
 
-To control the car via Bluetooth, please open **“Sketch_20.1_Bluetooth_car”** folder in **“car_4_wheels\\Sketches”** and then double-click **“Sketch_20.1_Bluetooth_car.ino”**.
+To control the car via Bluetooth, please open **“Sketch_20.1_Bluetooth_car”** folder in **“Three-Wheel\\Sketches”** and then double-click **“Sketch_20.1_Bluetooth_car.ino”**.
 
 Interface Introduction
 ====================================

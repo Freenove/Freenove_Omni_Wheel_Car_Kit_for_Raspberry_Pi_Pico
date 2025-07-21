@@ -16,6 +16,7 @@ The bottom plate of the car has a distinction between the top and bottom, which 
 
 .. table:: 
     :align: center
+    :class: table-line
 
     +----------------+
     | Top:           |
@@ -40,43 +41,47 @@ There are 3 bracket packages to fix motors, each containing an aluminum bracket,
 
 Installation steps:
 
-+------------------------------------------------------------------------------------------------------------+
-| Step 1 Motor Assembly                                                                                      |
-|                                                                                                            |
-| Mount the motor bracket to the motor with two M3x30 screws and two M3 nuts. Please note that the connect   |
-|                                                                                                            |
-| or of the encoder should be at the same side of the motor bracket, as shown below:                         |
-|                                                                                                            |
-| |Chapter01_03|                                                                                             |
-+------------------------------------------------------------------------------------------------------------+
-| Step 2: Mount the motors to the bottom plate with two M3x8 screws.                                         |
-|                                                                                                            |
-| Please note that the motor bracket should be inward and the motor axis is facing out at the center of the  |
-|                                                                                                            |
-| board edge, as shown below:                                                                                |
-|                                                                                                            |
-| |Chapter01_33|                                                                                             |
-|                                                                                                            |
-| After assembly:                                                                                            |
-|                                                                                                            |
-| |Chapter01_34|                                                                                             |
-+------------------------------------------------------------------------------------------------------------+
-| Step 3: Wheel assembly                                                                                     |
-|                                                                                                            |
-| Fix the omni wheels to the car with the accompanying coupling and screw.                                   |
-|                                                                                                            |
-| |Chapter01_35|                                                                                             |
-|                                                                                                            |
-| After assembly:                                                                                            |
-|                                                                                                            |
-| |Chapter01_36|                                                                                             |
-+------------------------------------------------------------------------------------------------------------+
-| Step 4: Repeat the above steps to assemble the other two motors and wheels.                                |
-|                                                                                                            |
-| After assembly:                                                                                            |
-|                                                                                                            |
-| |Chapter01_37|                                                                                             |
-+------------------------------------------------------------------------------------------------------------+
+.. table:: 
+    :align: center
+    :class: table-line
+
+    +------------------------------------------------------------------------------------------------------------+
+    | Step 1 Motor Assembly                                                                                      |
+    |                                                                                                            |
+    | Mount the motor bracket to the motor with two M3x30 screws and two M3 nuts. Please note that the connect   |
+    |                                                                                                            |
+    | or of the encoder should be at the same side of the motor bracket, as shown below:                         |
+    |                                                                                                            |
+    | |Chapter01_03|                                                                                             |
+    +------------------------------------------------------------------------------------------------------------+
+    | Step 2: Mount the motors to the bottom plate with two M3x8 screws.                                         |
+    |                                                                                                            |
+    | Please note that the motor bracket should be inward and the motor axis is facing out at the center of the  |
+    |                                                                                                            |
+    | board edge, as shown below:                                                                                |
+    |                                                                                                            |
+    | |Chapter01_33|                                                                                             |
+    |                                                                                                            |
+    | After assembly:                                                                                            |
+    |                                                                                                            |
+    | |Chapter01_34|                                                                                             |
+    +------------------------------------------------------------------------------------------------------------+
+    | Step 3: Wheel assembly                                                                                     |
+    |                                                                                                            |
+    | Fix the omni wheels to the car with the accompanying coupling and screw.                                   |
+    |                                                                                                            |
+    | |Chapter01_35|                                                                                             |
+    |                                                                                                            |
+    | After assembly:                                                                                            |
+    |                                                                                                            |
+    | |Chapter01_36|                                                                                             |
+    +------------------------------------------------------------------------------------------------------------+
+    | Step 4: Repeat the above steps to assemble the other two motors and wheels.                                |
+    |                                                                                                            |
+    | After assembly:                                                                                            |
+    |                                                                                                            |
+    | |Chapter01_37|                                                                                             |
+    +------------------------------------------------------------------------------------------------------------+
 
 .. |Chapter01_03| image:: ../../codes/_static/imgs/1_Car_Assembly/Chapter01_03.png
 .. |Chapter01_33| image:: ../../codes/_static/imgs/1_Car_Assembly/Chapter01_33.png
@@ -88,23 +93,27 @@ Installation steps:
 Battery Holder Assembly
 ----------------------------------
 
-+----------------------------------------------------------------------------+
-| Step 1: Battery holder assembly                                            |
-|                                                                            |
-| 1. Put the battery holder on the back of the car chassis.                  |
-|                                                                            |
-| 2. Mount the battery holder to the plate with four M3x10 flat-head screws. |
-|                                                                            |
-| |Chapter01_38|                                                             |
-+----------------------------------------------------------------------------+
-| Step2: Fix it with four M3 nuts.                                           |
-|                                                                            |
-| |Chapter01_39|                                                             |
-|                                                                            |
-| After assembly:                                                            |
-|                                                                            |
-| |Chapter01_40|                                                             |
-+----------------------------------------------------------------------------+
+.. table:: 
+    :align: center
+    :class: table-line
+
+    +----------------------------------------------------------------------------+
+    | Step 1: Battery holder assembly                                            |
+    |                                                                            |
+    | 1. Put the battery holder on the back of the car chassis.                  |
+    |                                                                            |
+    | 2. Mount the battery holder to the plate with four M3x10 flat-head screws. |
+    |                                                                            |
+    | |Chapter01_38|                                                             |
+    +----------------------------------------------------------------------------+
+    | Step2: Fix it with four M3 nuts.                                           |
+    |                                                                            |
+    | |Chapter01_39|                                                             |
+    |                                                                            |
+    | After assembly:                                                            |
+    |                                                                            |
+    | |Chapter01_40|                                                             |
+    +----------------------------------------------------------------------------+
 
 .. |Chapter01_38| image:: ../../codes/_static/imgs/1_Car_Assembly/Chapter01_38.png
 .. |Chapter01_39| image:: ../../codes/_static/imgs/1_Car_Assembly/Chapter01_39.png
@@ -113,43 +122,47 @@ Battery Holder Assembly
 Expansion Board Assembly
 ----------------------------------
 
-+--------------------------------------------------------------------------------------+
-| Step 1: Standoffs Installation                                                       |
-|                                                                                      |
-| 1. Put two M3x11 standoffs on the expansion board.                                   |
-|                                                                                      |
-| 2. Fix the standoffs with two M3x8 screws.                                           |
-|                                                                                      |
-| |Chapter01_11|                                                                       |
-|                                                                                      |
-| After assembly:                                                                      |
-|                                                                                      |
-| |Chapter01_12|                                                                       |
-+--------------------------------------------------------------------------------------+
-| Step 2: Plug in the Raspberry Pi Pico (or Raspberry Pi Pico W/ Raspberry Pi Pico 2)  |
-|                                                                                      |
-| |Chapter01_13|                                                                       |
-|                                                                                      |
-| |Chapter01_14|                                                                       |
-|                                                                                      |
-| After assembly:                                                                      |
-|                                                                                      |
-| |Chapter01_15|                                                                       |
-|                                                                                      |
-| **Caution:** The Raspberry Pi Pico (W) has a specific orientation for installation.  |
-|                                                                                      |
-| Ensure correct placement based on the markings on the expansion board.               |
-|                                                                                      |
-| Improper installation may result in damage to the Raspberry Pi Pico (W).             |
-+--------------------------------------------------------------------------------------+
-| Step 3: Plug in four peripheral modules.                                             |
-|                                                                                      |
-| |Chapter01_16|                                                                       |
-|                                                                                      |
-| After assembly:                                                                      |
-|                                                                                      |
-| |Chapter01_17|                                                                       |
-+--------------------------------------------------------------------------------------+
+.. table:: 
+    :align: center
+    :class: table-line
+
+    +--------------------------------------------------------------------------------------+
+    | Step 1: Standoffs Installation                                                       |
+    |                                                                                      |
+    | 1. Put two M3x11 standoffs on the expansion board.                                   |
+    |                                                                                      |
+    | 2. Fix the standoffs with two M3x8 screws.                                           |
+    |                                                                                      |
+    | |Chapter01_11|                                                                       |
+    |                                                                                      |
+    | After assembly:                                                                      |
+    |                                                                                      |
+    | |Chapter01_12|                                                                       |
+    +--------------------------------------------------------------------------------------+
+    | Step 2: Plug in the Raspberry Pi Pico (or Raspberry Pi Pico W/ Raspberry Pi Pico 2)  |
+    |                                                                                      |
+    | |Chapter01_13|                                                                       |
+    |                                                                                      |
+    | |Chapter01_14|                                                                       |
+    |                                                                                      |
+    | After assembly:                                                                      |
+    |                                                                                      |
+    | |Chapter01_15|                                                                       |
+    |                                                                                      |
+    | **Caution:** The Raspberry Pi Pico (W) has a specific orientation for installation.  |
+    |                                                                                      |
+    | Ensure correct placement based on the markings on the expansion board.               |
+    |                                                                                      |
+    | Improper installation may result in damage to the Raspberry Pi Pico (W).             |
+    +--------------------------------------------------------------------------------------+
+    | Step 3: Plug in four peripheral modules.                                             |
+    |                                                                                      |
+    | |Chapter01_16|                                                                       |
+    |                                                                                      |
+    | After assembly:                                                                      |
+    |                                                                                      |
+    | |Chapter01_17|                                                                       |
+    +--------------------------------------------------------------------------------------+
 
 .. |Chapter01_11| image:: ../../codes/_static/imgs/1_Car_Assembly/Chapter01_11.png
 .. |Chapter01_12| image:: ../../codes/_static/imgs/1_Car_Assembly/Chapter01_12.png
@@ -162,32 +175,36 @@ Expansion Board Assembly
 Mounting the Expansion Board to Car Chassis
 -----------------------------------------------
 
-+--------------------------------------------------------------------------+
-| Step 1: Installing four M3x30 standoffs.                                 |
-|                                                                          |
-| 1. Put four M3x30 standoffs on the top of the chassis.                   |
-|                                                                          |
-| 2. Tighten with four M3x8 screws.                                        |
-|                                                                          |
-| |Chapter01_41|                                                           |
-|                                                                          |
-| After assembly:                                                          |
-|                                                                          |
-| |Chapter01_42|                                                           |
-+--------------------------------------------------------------------------+
-| Step 2: Fix the expansion board to the standoffs with four M3x8 screws.  |
-|                                                                          |
-| |Chapter01_43|                                                           |
-|                                                                          |
-| After assembly:                                                          |
-|                                                                          |
-| |Chapter01_44|                                                           |
-+--------------------------------------------------------------------------+
+.. table:: 
+    :align: center
+    :class: table-line
 
-.. |Chapter01_41| image:: ../../codes/_static/imgs/1_Car_Assembly/Chapter01_18.png
-.. |Chapter01_42| image:: ../../codes/_static/imgs/1_Car_Assembly/Chapter01_19.png
-.. |Chapter01_43| image:: ../../codes/_static/imgs/1_Car_Assembly/Chapter01_20.png
-.. |Chapter01_44| image:: ../../codes/_static/imgs/1_Car_Assembly/Chapter01_20.png
+    +--------------------------------------------------------------------------+
+    | Step 1: Installing four M3x30 standoffs.                                 |
+    |                                                                          |
+    | 1. Put four M3x30 standoffs on the top of the chassis.                   |
+    |                                                                          |
+    | 2. Tighten with four M3x8 screws.                                        |
+    |                                                                          |
+    | |Chapter01_41|                                                           |
+    |                                                                          |
+    | After assembly:                                                          |
+    |                                                                          |
+    | |Chapter01_42|                                                           |
+    +--------------------------------------------------------------------------+
+    | Step 2: Fix the expansion board to the standoffs with four M3x8 screws.  |
+    |                                                                          |
+    | |Chapter01_43|                                                           |
+    |                                                                          |
+    | After assembly:                                                          |
+    |                                                                          |
+    | |Chapter01_44|                                                           |
+    +--------------------------------------------------------------------------+
+
+.. |Chapter01_41| image:: ../../codes/_static/imgs/1_Car_Assembly/Chapter01_41.png
+.. |Chapter01_42| image:: ../../codes/_static/imgs/1_Car_Assembly/Chapter01_42.png
+.. |Chapter01_43| image:: ../../codes/_static/imgs/1_Car_Assembly/Chapter01_43.png
+.. |Chapter01_44| image:: ../../codes/_static/imgs/1_Car_Assembly/Chapter01_44.png
 
 Wires Connection
 ----------------------------
@@ -204,19 +221,23 @@ Installing two 18650 batteries
 
 **If you have any concerns, please feel free to contact us via support@freenove.com**
 
-+----------------------------------------------------------------+
-| Step 1: Distinguishing positive and negative of the batteries. |
-|                                                                |
-| |Chapter01_24|                                                 |
-+----------------------------------------------------------------+
-| Step 2: Correctly install the batteries.                       |
-|                                                                |
-| |Chapter01_46|                                                 |
-+----------------------------------------------------------------+
-| Step3: Install the cover for battery holder.                   |
-|                                                                |
-| |Chapter01_47|                                                 |
-+----------------------------------------------------------------+
+.. table:: 
+    :align: center
+    :class: table-line
+
+    +----------------------------------------------------------------+
+    | Step 1: Distinguishing positive and negative of the batteries. |
+    |                                                                |
+    | |Chapter01_24|                                                 |
+    +----------------------------------------------------------------+
+    | Step 2: Correctly install the batteries.                       |
+    |                                                                |
+    | |Chapter01_46|                                                 |
+    +----------------------------------------------------------------+
+    | Step3: Install the cover for battery holder.                   |
+    |                                                                |
+    | |Chapter01_47|                                                 |
+    +----------------------------------------------------------------+
 
 .. |Chapter01_24| image:: ../../codes/_static/imgs/1_Car_Assembly/Chapter01_24.png
 .. |Chapter01_46| image:: ../../codes/_static/imgs/1_Car_Assembly/Chapter01_46.png

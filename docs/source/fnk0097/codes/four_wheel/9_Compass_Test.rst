@@ -45,7 +45,7 @@ Plug the compass sensor to the expansion board to have it connected to the Raspb
 Schematic
 ======================================
 
-As shown in the schematic below, the SDA and SCL of the sensor are connected to GP4 and GP5 pf the Raspberry Pi Pico (W) respectively.
+As shown in the schematic below, the SDA and SCL of the sensor are connected to GP4 and GP5 of the Raspberry Pi Pico (W) respectively.
 
 .. image:: ../../codes/_static/imgs/9_Compass_Test/Chapter09_02.png
     :align: center

@@ -34,7 +34,7 @@ As we can see, the buzzer is controlled by GPIO26 of Raspberry Pi Pico W. When t
 Sketch
 **********************************
 
-Next, we download the code to Raspberry Pi Pico (W) to test the buzzer. Open "03.1_Buzzer" folder under "Freenove_Omni_Wheel_Car_Kit_for_Raspberry_Pi_Pico\\Four-Wheel\\Sketch" and double-click "03.1_Buzzer.ino".
+Next, we download the code to Raspberry Pi Pico (W) to test the buzzer. Open **"03.1_Buzzer"** folder under **"Freenove_Omni_Wheel_Car_Kit_for_Raspberry_Pi_Pico\\Four-Wheel\\Sketch"** and double-click **"03.1_Buzzer.ino"**.
 
 .. image:: ../../codes/_static/imgs/5_Buzzer_Test/Chapter05_03.png
     :align: center
@@ -84,7 +84,7 @@ Call the function to have the buzzer make sounds at 100Hz every 500ms, and repea
 Reference 
 -----------------------------------
 
-.. py:function:: arg1 void tone(uint8_t pin, unsigned int frequency, unsigned long duration = 0);
+.. py:function:: void tone(uint8_t pin, unsigned int frequency, unsigned long duration = 0);
 
     The tone function is commonly used to control a buzzer.
 

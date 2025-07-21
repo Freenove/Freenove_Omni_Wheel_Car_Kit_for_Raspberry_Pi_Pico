@@ -22,15 +22,19 @@ Sketch
 
 Open **“Sketch_16.1_Ultrasonic_car”** folder in **“Freenove_Omni_Wheel_Car_Kit_for_Raspberry_Pi_Pico\\Three-Wheel\\Sketches”** and then double-click **“Sketch_16.1_Ultrasonic_car.ino”**.
 
+.. image:: ../../codes/_static/imgs/18_Sonar_Mode/Chapter18_04.png
+    :align: center
+
 Code
 =================================
 
-Sketch_16.1_Ultrasonic_car.ino
+Motor.cpp
 ---------------------------------
 
-.. literalinclude:: ../../../freenove_Kit/Three-Wheel/Sketch/Sketch_16.1_Ultrasonic_car/Sketch_16.1_Ultrasonic_car.ino
+.. literalinclude:: ../../../freenove_Kit/Three-Wheel/Sketch/Sketch_16.1_Ultrasonic_car/Motor.cpp
     :linenos:
     :language: c
+    :lines: 54-171
     :dedent:
 
 Ultrasonic.cpp

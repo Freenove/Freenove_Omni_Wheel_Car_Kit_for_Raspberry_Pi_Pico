@@ -45,8 +45,8 @@ The indicator on Pico W starts to flash.
 
 .. note::
 
-   1. :red:`At the first use of Arduino to upload sketch for Pico (W), you need to select a port on the UF2 board. After that, each time before uploading sketch, please check whether the port has bed selected; otherwise, the downloading may fail.`
+   :red:`1. At the first use of Arduino to upload sketch for Pico (W), you need to select a port on the UF2 board. After that, each time before uploading sketch, please check whether the port has bed selected; otherwise, the downloading may fail.`
 
-   2. :red:`Sometimes, Pico (W) may lose firmware due to the code and fail to work. At this point, you can upload firmware for Pico (W) as mentioned above.`
+   :red:`2. Sometimes, Pico (W) may lose firmware due to the code and fail to work. At this point, you can upload firmware for Pico (W) as mentioned above.`
 
-   3. :red:`Please note that after uploading the first code to Pico, the port UF2_Board will disappear and Pico will create a virtual serial port. Taking Windows system as an example, as shown in the figure above, a port named COMx shows up. Here, x represents a number. The value of x may vary among different computers.`
+   :red:`3. Please note that after uploading the first code to Pico, the port UF2_Board will disappear and Pico will create a virtual serial port. Taking Windows system as an example, as shown in the figure above, a port named COMx shows up. Here, x represents a number. The value of x may vary among different computers.`

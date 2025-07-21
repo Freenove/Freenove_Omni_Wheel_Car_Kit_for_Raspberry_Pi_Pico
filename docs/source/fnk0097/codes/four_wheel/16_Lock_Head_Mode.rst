@@ -45,7 +45,7 @@ Before uploading the sketch, please make sure the IMU_Fusion_SYC library has bee
 
 .. note::
     
-    :red:`The small car's direction of motion always points towards 200 degrees in the magnetic field!`
+    :combo:`red font-bolder:Caution: Digital compasses are very sensitive to magnetic disturbances. After adding additional modules near the compass, it is essential to recalibrate it. Failure to do so may result in unstable operation of the car!`
 
 Interface Introduction
 -----------------------------

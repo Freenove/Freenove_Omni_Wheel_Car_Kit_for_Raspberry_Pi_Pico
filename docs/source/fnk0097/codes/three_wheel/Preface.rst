@@ -12,8 +12,8 @@ This car does not require a high threshold for users. Even if you know little pr
 
 Pico (W) and hope to learn how to program and build circuits, please visit our website: 
 
-www.freenove.com
+`www.freenove.com <https://www.freenove.com/>`_
 
 or contact us to buy our kit designed for beginners:
 
-:red:`Freenove Ultimate Kit for Raspberry Pi Pico.`
+:combo:`red x-large font-bolder:Freenove Ultimate Kit for Raspberry Pi Pico.`

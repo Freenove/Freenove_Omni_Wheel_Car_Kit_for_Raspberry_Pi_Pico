@@ -14,7 +14,7 @@ Omni wheels are a unique type of wheel that can move freely in any direction, no
 
 As shown in the figure below, the left one is an omni wheel and the right one is a conventional wheel.
 
-.. image:: ../../codes/_static/imgs/13_Kinematic_Analysis/Chapter13_01.png
+.. image:: ../../codes/_static/imgs/13_Kinematic_Analysis/Chapter13_00.png
     :align: center
 
 Attitude Calculation of Omni-Wheeled Car
@@ -26,6 +26,8 @@ The following figure shows the attitude analysis of the omni-wheeled car.
 
 .. image:: ../../codes/_static/imgs/13_Kinematic_Analysis/Chapter13_09.png
     :align: center
+
+The symbols and their meaning are as described in the following table.
 
 .. table:: 
     :class: freenove-ow
@@ -178,7 +180,7 @@ The function Motor_Control() is called under the loop function to control the ca
 .. literalinclude:: ../../../freenove_Kit/Four-Wheel/Sketch/Sketch_11.1_Kinematic_analysis/Sketch_11.1_Kinematic_analysis.ino
    :linenos:
    :language: c
-   :lines: 41-41
+   :lines: 42-42
    :dedent:
 
 Reference

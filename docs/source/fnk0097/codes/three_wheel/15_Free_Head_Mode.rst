@@ -74,7 +74,7 @@ Before uploading the sketch, please make sure the IMU_Fusion_SYC library has bee
 
 After downloading the code, open Freenove APP and click the connection icon to connect the Bluetooth. For installing the APP and Bluetooth connection, please refer to :ref:`fnk0097/codes/three_wheel/freenove_app:introduction to the app`.
 
-:red:`Caution: Digital compasses are very sensitive to magnetic disturbances. After adding additional modules near the compass, it is essential to recalibrate it. Failure to do so may result in unstable operation of the car!`
+:combo:`red font-bolder:Caution: Digital compasses are very sensitive to magnetic disturbances. After adding additional modules near the compass, it is essential to recalibrate it. Failure to do so may result in unstable operation of the car!`
 
 If you need any support, please feel free to contact us via: support@freenove.com
 

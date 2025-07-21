@@ -47,6 +47,7 @@ Motor.cpp
 .. literalinclude:: ../../../freenove_Kit/Four-Wheel/Sketch/Sketch_12.1_Manual_Control/Motor.cpp
     :linenos:
     :language: c
+    :lines: 65-83
     :dedent:
 
 After downloading the code, open Freenove APP on your phone and connect it to the Bluetooth of the car. For installing the APP and connecting Bluetooth, please refer to :ref:`fnk0097/codes/four_wheel/freenove_app:introduction to the app`

@@ -36,7 +36,7 @@ If you need any support, please feel free to contact us via: support@freenove.co
 Sketch
 **************************************
 
-Next, we download the code to Raspberry Pi Pico (W) to test the motor. Open "Sketch_01.1_Serial" folder under "Freenove_Omni_Wheel_Car_Kit_for_Raspberry_Pi_Pico\\Three-Wheel\\Sketch" and double-click "Sketch_01.1\_ Serial.ino".
+Next, we download the code to Raspberry Pi Pico (W) to test the motor. Open **"Sketch_01.1_Serial"** folder under **"Freenove_Omni_Wheel_Car_Kit_for_Raspberry_Pi_Pico\\Three-Wheel\\Sketch"** and double-click **"Sketch_01.1_Serial.ino"**.
 
 .. image:: ../_static/imgs/3_Serial/Chapter03_03.png
     :align: center

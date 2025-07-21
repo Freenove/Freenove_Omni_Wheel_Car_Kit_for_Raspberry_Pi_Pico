@@ -12,6 +12,9 @@ Bluetooth
 
 Bluetooth modules are devices designed for wireless communication, capable of transmitting data over short distances with the aim of facilitating low-power data transfer between devices. They rely on radio frequency signals, predominantly functioning in the 2.4 GHz band. This frequency spectrum is internationally recognized, ensuring compatibility and connectivity across various geographical locations.
 
+.. image:: ../../codes/_static/imgs/12_Bluetooth_Test/Chapter12_07.png
+    :align: center
+
 The port description of the Bluetooth module is as follows:
 
 .. table:: 
@@ -80,11 +83,11 @@ Sketch
 
 Open "Sketch_10.1_Bluetooth" folder in **"Freenove_Omni_Wheel_Car_Kit_for_Raspberry_Pi_Pico\\Three-Wheel\\Sketches"** and then double-click **"Sketch_10.1_Bluetooth.ino".** 
 
-Code
-=================================
-
 .. image:: ../../codes/_static/imgs/12_Bluetooth_Test/Chapter12_03.png
     :align: center
+
+Code
+=================================
 
 .. literalinclude:: ../../../freenove_Kit/Three-Wheel/Sketch/Sketch_10.1_BlueTooth/Sketch_10.1_BlueTooth.ino
    :linenos:
