@@ -237,7 +237,7 @@ CMD_POWER_Bluetooth = "F"
 
 :combo:`font-bolder x-large:This command checks the battery power.`
 
-The slave device proactively sends data to the master device in the format: P#Battery Voltage\n (Example: P#8.12\n). In the APP, this voltage value will be displayed, with the unit being millivolts (mv).
+The slave device proactively sends data to the master device in the format: P#Battery Voltage\\n (Example: P#8.12\\n). In the APP, this voltage value will be displayed, with the unit being millivolts (mv).
 
 .. table:: 
     :class: freenove-ow
@@ -254,7 +254,7 @@ The slave device proactively sends data to the master device in the format: P#Ba
 CMD_ULTRASONIC_Bluetooth = "E"
 -----------------------------------
 
-The slave device proactively sends data to the master device in the format: E#Distance Value\\n (Example: E#22\n). In the APP, this distance value will be displayed, with the unit being centimeters (cm).
+The slave device proactively sends data to the master device in the format: E#Distance Value\\n (Example: E#22\\n). In the APP, this distance value will be displayed, with the unit being centimeters (cm).
 
 .. table:: 
     :class: freenove-ow
