@@ -23,11 +23,16 @@ Car Expansion Board
 Machinery Parts
 *****************************
 
-+----------+----------+----------+
-| |List02| | |List03| | |List04| |
-+----------+----------+----------+
-| |List05| | |List06| |          |
-+----------+----------+----------+
+.. table:: 
+    :align: center
+    :class: table-line
+    :width: 90%
+
+    +----------+----------+----------+
+    | |List02| | |List03| | |List04| |
+    +----------+----------+----------+
+    | |List05| | |List06| |          |
+    +----------+----------+----------+
 
 .. |List02| image:: ../../codes/_static/imgs/List/List02.png
 .. |List03| image:: ../../codes/_static/imgs/List/List03.png
@@ -38,21 +43,26 @@ Machinery Parts
 Transmission Parts
 *****************************
 
-+-----------------------------+-----------------------------+
-| Motor bracket package x4                                  |
-|                                                           |
-| (Motor Bracket x1, M3x8 Screws x2, M3x30 Screws x2) x4    |
-|                                                           |
-| |List07|                                                  |
-+-----------------------------+-----------------------------+
-| TT Motor with Encoder x4    | Omni wheels x4              |
-|                             |                             |
-| |List08|                    | |List09|                    |
-+-----------------------------+-----------------------------+
-| Coupling for Omni Wheels x4 | M2.5x25 Screw x4            |
-|                             |                             |
-| |List10|                    | |List11|                    |
-+-----------------------------+-----------------------------+
+.. table:: 
+    :align: center
+    :class: table-line
+    :width: 90%
+
+    +-----------------------------+-----------------------------+
+    | Motor bracket package x4                                  |
+    |                                                           |
+    | (Motor Bracket x1, M3x8 Screws x2, M3x30 Screws x2) x4    |
+    |                                                           |
+    | |List07|                                                  |
+    +-----------------------------+-----------------------------+
+    | TT Motor with Encoder x4    | Omni wheels x4              |
+    |                             |                             |
+    | |List08|                    | |List09|                    |
+    +-----------------------------+-----------------------------+
+    | Coupling for Omni Wheels x4 | M2.5x25 Screw x4            |
+    |                             |                             |
+    | |List10|                    | |List11|                    |
+    +-----------------------------+-----------------------------+
 
 .. |List07| image:: ../../codes/_static/imgs/List/List07.png
 .. |List08| image:: ../../codes/_static/imgs/List/List08.png
@@ -63,19 +73,24 @@ Transmission Parts
 Electronic Parts
 *****************************
 
-+---------------------+-------------------------+----------------------------------------+
-| Digital Compass x 1 |MPU6050 Gyroscope x 1    |Bluetooth x 1                           |
-|                     |                         |                                        |
-| |List12|            | |List13|                | |List14|                               |
-+---------------------+--------------+----------+----------------------------------------+
-| Infrared Emitter x1                |Raspberry Pi Pico W x1 or Raspberry Pi Pico x1     |
-|                                    |                                                   |
-| |List15|                           | |List16|                                          |
-+------------------------------------+---------------------------------------------------+
-| Battery Holder x 1                 |Ultrasonic Module x1                               |
-|                                    |                                                   |
-| |List17|                           | |List18|                                          |
-+------------------------------------+---------------------------------------------------+
+.. table:: 
+    :align: center
+    :class: table-line
+    :width: 90%
+
+    +---------------------+-------------------------+----------------------------------------+
+    | Digital Compass x 1 |MPU6050 Gyroscope x 1    |Bluetooth x 1                           |
+    |                     |                         |                                        |
+    | |List12|            | |List13|                | |List14|                               |
+    +---------------------+--------------+----------+----------------------------------------+
+    | Infrared Emitter x1                |Raspberry Pi Pico W x1 or Raspberry Pi Pico x1     |
+    |                                    |                                                   |
+    | |List15|                           | |List16|                                          |
+    +------------------------------------+---------------------------------------------------+
+    | Battery Holder x 1                 |Ultrasonic Module x1                               |
+    |                                    |                                                   |
+    | |List17|                           | |List18|                                          |
+    +------------------------------------+---------------------------------------------------+
 
 .. |List12| image:: ../../codes/_static/imgs/List/List12.png
     :width: 80%

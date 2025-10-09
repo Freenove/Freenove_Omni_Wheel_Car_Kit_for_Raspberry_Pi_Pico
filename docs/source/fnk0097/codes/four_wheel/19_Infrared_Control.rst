@@ -43,7 +43,7 @@ After downloading the code, place the car on the ground and turn ON the power sw
 
 .. table:: 
     :align: center
-    :class: text-center font-bolder :x-large:`
+    :class: text-center font-bolder table-line
     :widths: 1 1 1 
 
     +----------------+---------------------+----------------------+

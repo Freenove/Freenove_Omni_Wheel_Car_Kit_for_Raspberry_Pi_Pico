@@ -13,5 +13,4 @@ We will make every effort to make changes and correct errors as soon as feasibly
 
 If you want to learn more about Arduino, ESP32, Raspberry Pi Pico W, Raspberry Pi, Smart Cars, Robotics and other interesting products in science and technology, please continue to visit our website. We will continue to launch fun, cost effective, innovative and exciting products.
 
-
 Thank you again for choosing Freenove products.
