@@ -35,3 +35,4 @@ This product provides the following online documents.
 
    fnk0097/codes/three_wheel.rst
    fnk0097/codes/four_wheel.rst
+   fnk0097/codes/Product_Certification.rst
